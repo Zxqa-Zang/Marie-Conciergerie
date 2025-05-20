@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marie Conciergerie | La Rochelle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #2c3e50;
+      --hover-color: #3498db;
+      --bg-color: #fdfdfd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--main-color), #34495e);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .services, .logements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #f0f8ff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: var(--hover-color);
+    }
+
+    footer {
+      background: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 700px) {
+      .services, .logements {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Marie Conciergerie</h1>
+  <p>Conciergerie privée à La Rochelle</p>
+</header>
+
+<section id="about">
+  <h2>À propos</h2>
+  <p style="text-align:center; max-width: 700px; margin:auto;">Je suis Marie, fondatrice de Marie Conciergerie. J’accompagne les propriétaires de La Rochelle dans la gestion complète de leurs biens et services sur-mesure pour leurs voyageurs.</p>
+</section>
+
+<section id="services">
+  <h2>Nos Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Gestion Airbnb</h3>
+      <p>Accueil, ménage, communication voyageurs… on s'occupe de tout !</p>
+    </div>
+    <div class="card">
+      <h3>Service linge & ménage</h3>
+      <p>Des logements toujours propres, accueillants et parfaitement préparés.</p>
+    </div>
+    <div class="card">
+      <h3>Conciergerie sur-mesure</h3>
+      <p>Services personnalisés, livraisons, demandes VIP à la carte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dans la section "Nos Logements" -->
+<section id="logements">
+  <h2>Nos Logements</h2>
+  <div class="logements">
+    <div class="card">
+      <a href="https://maps.google.com/?q=46.1514,-1.1659" target="_blank">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Maison La Rochelle">
+      </a>
+      <h3>Appartement Vue Mer</h3>
+      <p>Un superbe 2 pièces face à l'océan, à 5 minutes du port de La Rochelle.</p>
+    </div>
+
+    <div class="card">
+      <a href="https://maps.google.com/?q=46.1571,-1.1605" target="_blank">
+        <img src="https://images.unsplash.com/photo-1600585153837-8d29db25607c" alt="Villa La Rochelle">
+      </a>
+      <h3>Villa avec Piscine</h3>
+      <p>Grande maison moderne avec piscine et jardin, idéale pour les familles.</p>
+    </div>
+
+    <div class="card">
+      <a href="https://maps.google.com/?q=46.1598,-1.1513" target="_blank">
+        <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78827" alt="Studio centre">
+      </a>
+      <h3>Studio Centre Ville</h3>
+      <p>Compact et lumineux, au cœur de La Rochelle, idéal pour les voyageurs solo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Nouvelle section avec carte Google Maps -->
+<section id="map">
+  <h2>Localisation des logements</h2>
+  <div style="max-width: 1000px; margin: auto;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10848.769224182412!2d-1.1605!3d46.1571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1716112152851!5m2!1sfr!2sfr"
+      width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Votre nom" required>
+    <input type="email" placeholder="Votre email" required>
+    <textarea rows="5" placeholder="Votre message..." required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Marie Conciergerie – La Rochelle | Site moderne✨</p>
+</footer>
+
+<script>
+  // Animation au scroll
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
